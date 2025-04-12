@@ -33,17 +33,17 @@ export default function AppointmentCalendar({ onDateSelect }: AppointmentCalenda
         locale={esLocale}
         select={handleDateSelect}
         height="auto"
-        selectConstraint={{
-          start: new Date().toISOString().split('T')[0], // Desde hoy
-          end: new Date(new Date().setMonth(new Date().getMonth() + 3)) // Hasta 3 meses después
-        }}
         businessHours={{
           daysOfWeek: [1, 2, 3, 4, 5, 6], // Lunes a Sábado
           startTime: '09:00',
           endTime: '18:00',
         }}
-        selectConstraint="businessHours"
+        selectConstraint={{
+          start: new Date().toISOString().split('T')[0], // Desde hoy
+          end: new Date(new Date().setMonth(new Date().getMonth() + 3)), // Hasta 3 meses después
+          businessHours: true
+        }}
       />
     </div>
   );
-} 
+}
