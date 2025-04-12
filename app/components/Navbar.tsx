@@ -73,7 +73,7 @@ export default function Navbar() {
             <Link href="/appointments" className="block px-3 py-2 text-dental-primary hover:text-dental-primary/90">
               Reservar Cita
             </Link>
-            <Link href="/profile" className="block px-3 py-2 text-dental-dark hover:text-dental-primary">
+            <Link href="/admin" className="block px-3 py-2 text-dental-dark hover:text-dental-primary">
               Mi Cuenta
             </Link>
           </div>
